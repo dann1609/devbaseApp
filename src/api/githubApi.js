@@ -2,7 +2,7 @@ import Environments from '../config/environments';
 
 export default {
   getGithubUser: function (user) {
-    const url = `${Environments.BASE}${Environments.USERS}${type}${user}`;
+    const url = `${Environments.BASE}${Environments.USERS}/${user}`;
     return fetch(url, {
       method: 'GET',
       headers: {

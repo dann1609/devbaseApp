@@ -1,6 +1,6 @@
 const Environments = {
   BASE: 'https://api.github.com',
-  USERS: 'users',
+  USERS: '/users',
 };
 
 export default Environments;
