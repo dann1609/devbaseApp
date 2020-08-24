@@ -1,17 +1,7 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  Text,
-  View,
-  TouchableOpacity,
-} from 'react-native';
-import {
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {SafeAreaView, Text, View, TouchableOpacity} from 'react-native';
+
+import mainStyles from './mainStyle';
 
 function MainScreen(props) {
   const {navigation} = props;
