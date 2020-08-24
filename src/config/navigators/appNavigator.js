@@ -28,7 +28,10 @@ function AppNavigator() {
       <Stack.Screen
         name="details"
         component={DetailsScreen}
-        options={{title: 'Home'}}
+        options={{
+          title: 'Home',
+          headerBackTitle: 'Back',
+        }}
       />
     </Stack.Navigator>
   );
