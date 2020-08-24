@@ -3,6 +3,7 @@ import {SafeAreaView, Text, View, TouchableOpacity} from 'react-native';
 
 import mainStyles from './mainStyle';
 import {getGithubUser} from '../../actions/github';
+import UserButton from '../../components/userButton/userButton';
 
 function MainScreen(props) {
   const {navigation} = props;
@@ -39,23 +40,13 @@ function MainScreen(props) {
   return (
     <SafeAreaView>
       <View>
-        <Text>Top 5 GitHub Users</Text>
-        <Text>Tap username to see more information</Text>
-        {getUsersButtons()}
+        <Text style={mainStyles.title}>Top 5 GitHub Users</Text>
+        <Text style={mainStyles.details}>
+          Tap username to see more information
+        </Text>
+        <View style={mainStyles.buttonsContainer}>{getUsersButtons()}</View>
       </View>
     </SafeAreaView>
-  );
-}
-
-function UserButton(props) {
-  const {onPress, user} = props;
-
-  return (
-    <TouchableOpacity onPress={onPress}>
-      <View>
-        <Text>{user.name}</Text>
-      </View>
-    </TouchableOpacity>
   );
 }
 
